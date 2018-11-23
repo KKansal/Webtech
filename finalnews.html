@@ -1,0 +1,206 @@
+<html>
+    <head>
+            <link rel="icon"
+            type="image/png"
+            href="logo_final.png"/>
+            <title>CSR</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body{
+                background-image: url("pat13.jpg");
+            }
+            .header {
+                padding: 30px;
+                text-align: center;
+            }
+            .header h1 {
+                font-size: 50px;
+                font-family:Arial, Helvetica, sans-serif;
+                color:bisque;
+                /*text-shadow: 2px 2px black;*/
+            }
+            .pageName {
+                width:75%;
+            }
+            .pageName h2{
+                font-size: 40px;
+                text-align: center;
+                color: bisque;
+
+            }
+            .about {
+                font-size:20px;
+                width:60%;
+                /*margin-right:400px;*/
+                color: bisque;
+            }
+
+            .footer {
+                margin: 100px auto 0 auto;
+                padding: 30px;
+                width: 100%;
+                text-align: left;
+                background: black;
+                bottom:-650px;
+                position: absolute;
+                margin-bottom: 100px;
+            }
+            .pfoot{
+            text-align:center;
+            align-content:center;
+            margin: auto;
+            padding:10px 50px 50px 20px
+            }
+            .feedback{
+                text-align:left;
+                color:bisque;
+            }
+            .register {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: bisque;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                transition-duration: 0.4s;
+            }
+            .register:hover {
+                box-shadow: 3px 3px 3px grey;
+            }
+
+            .leftcolumn {
+                border: solid yellow 5px;
+                border-spacing: 1000px;
+                float: left;
+                width:1000px;
+                padding-left: 300px;
+                margin-left:100px;
+                align-content: center;
+            }
+            .topnav {
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: bisque;
+}
+
+            .card {
+                padding: 20px;
+                margin-top: 20px;
+                color: bisque;
+            }
+            .topnav {
+                overflow: hidden;
+                background-color: black;
+            }
+
+            /* Style the topnav links */
+            .topnav a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            /* Change color on hover */
+            .topnav a:hover {
+                background-color: #ddd;
+                color: bisque;
+            }
+        </style>
+    </head>
+    <body >
+        <div class="header">
+            <img src="logo_final.png" style="height:100px; width:100px; padding:2px; float:left"/>
+          <h1>KWYB - Know Where You Book !</h1>
+        </div>
+      <div class="topnav">
+        <a href="home.html">Home</a>
+        <a href="1.html">Host Now </a>
+        <a href="form2.html">Book Now</a>
+        <a href="clubs.html">Club </a>
+        <a href="newsfeed.html">News</a>
+        <a href="a.html" style="float:right">Help?</a>
+        <!-- <a href="login.html" style="float:right">Login</a> -->
+        
+      </div>
+
+            <div class="leftcolumn" >
+              <img id="csr" height="500px" width="600px" style="padding-left:0px; padding-top:30px; align:center;margin-left:-100px;"/>
+              <p id="about" style="width:600px;color:bisque;background-image: url();font-family:Philosopher; font-size:22px; text-align:justify; padding-left:20px;margin-left:-100px; ">
+
+              </p>
+            </div>
+            <div class="rightcolumn">
+        </div>
+        <div class="footer">
+                <div class="feedback">
+                    <button href="feedback.html">Feedback</button>
+                </div>
+                <div class="feedback" >
+                    <p> Email us - abc@ymail.com </p>
+                </div>
+            </div>
+    </body>
+    <script>
+    function news1()
+    {
+      a=document.getElementById("about");
+      a.innerHTML="Students got an opportunity to participate in the Akshaya Patra program and attend workshop on Mind and Body At Gurukula Vidya Peeta, they distributed books, clothes, and stationery and basic coaching in mathematics was conducted by the faculty.Students participated in the activity on September 29, 2018 as part of the Boot Strap program of department of computer applications.";
+    }
+    function news2()
+    {
+      a=document.getElementById("about");
+      a.innerHTML="To help the students prepare for interviews the alumni conducted mock interviews and group discussions. The alumni provided the feedback on the performance and answered questions about how to present themselves confidently.";
+    }
+    function news3()
+    {
+      a=document.getElementById("about");
+      a.innerHTML="PES University has taken the initiative of conducting Swachh Bharat Abhiyan on the occasion of Gandhi Jayanti on 2nd October 2018 at Lalbagh Botanical garden, Bangalore, under the guidance of Dr. M R Doreswamy, Chancellor.";
+    }
+    function news4()
+    {
+      a=document.getElementById("about");
+      a.innerHTML="The Eighth Annual Graduation Ceremony of PES Institute of Technology was organized on Saturday, 15th September, 2018. Shri. K V Chowdary, Chief Vigilance Commissioner,Central Vigilance Commission delivered the Graduation Ceremony Address. Dr. M.R. Doreswamy, Chancellor- PES University, Former MLC.";
+    }
+
+
+    csr=document.getElementById("csr");
+    csr.setAttribute("src","img1.jpg");
+    news1();
+    setTimeout(function(){csr.setAttribute("src","img2.jpg");
+      news2();},4000);
+      setTimeout(function(){csr.setAttribute("src","img3.jpg");
+        news3();},8000);
+    i1=setInterval(function(){
+    csr.setAttribute("src","img4.jpg");
+    news4();
+    setTimeout(function(){csr.setAttribute("src","img1.jpg"); news1();},3000);
+    setTimeout(function(){csr.setAttribute("src","img2.jpg");news2();},6000);
+    setTimeout(function(){csr.setAttribute("src","img3.jpg");news3();},9000);
+  },12000);
+
+    </script>
+</html>

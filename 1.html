@@ -1,0 +1,157 @@
+
+<html>
+    <head>
+            <link rel="icon"
+            type="image/png"
+            href="logo_final.png"/>
+            <style>
+              body{
+                    background-image: url("wheat.png");
+                    margin:0;
+              }
+              #top-bar{
+                /* background-color:#1f3448; */
+                background-color:#1c3142;
+                /* padding:1px; */
+                /* margin:-9px; */
+                color:#e67a83;
+                font-family: monospace;
+                display: flex;
+                margin:0;
+              }
+              .topnav {
+                  overflow: hidden;
+                  background-color: rgba(37, 37, 37, 0.74);
+                  border-radius: 25px;
+                  position:sticky;
+                  z-index:10;
+                  top:0;
+                  font-weight:bold;
+
+              }
+
+              /* Style the topnav links */
+              .topnav a {
+                  float: left;
+                  display: block;
+                  color: white;
+                  text-align: center;
+                  padding: 14px 16px;
+                  text-decoration: none;
+              }
+
+              /* Change color on hover */
+              .topnav a:hover {
+                  background-color: rgb(226, 201, 89);
+                  color: rgb(8, 12, 219);
+}
+              #main-content{
+                position: relative;
+                top:75px;
+                /* left:50px; */
+                width:95%;
+                margin:auto;
+                background:rgba(28, 49, 66, 0.8);
+                color:#deafb1;
+                font-family: monospace;
+              }
+              td{
+                padding:50px;
+                color:#deafb1;
+              }
+              .overlay {
+                position: relative;
+                top:-100px;
+                background: rgba(0, 0, 0, 0.5); /* Black see-through */
+                color: #f1f1f1;
+                width: 100%;
+                transition: .5s ease;
+                opacity:0;
+                color: white;
+                font-size: 20px;
+                text-align: center;
+                font-family: monospace;
+              }
+              td:hover .overlay{
+                opacity: 1;
+              }
+              .dimg {
+                width:400px;
+                height:400px;
+              }
+
+            </style>
+
+    </head>
+    <body>
+      <div id="top-bar">
+        <img src="logo_final.png" width="60px" height="60px"/>
+        <h1 style="margin-left:32%">Know Where to Book</h1>
+        <img style="margin-left:35%"src="logo_final.png" width="60px" height="60px"/>
+      </div>
+      <div class="topnav">
+        <a href="home.html">Home</a>
+        <a href="1.html">Host Now </a>
+        <a href="form2.html">Book Now</a>
+        <a href="clubs.html">Club </a>
+        <a href="newsfeed.html">News</a>
+        <a href="events.html">Events</a>
+        <a href="a.html" style="float:right">Help?</a>
+        <!-- <a href="login.html" style="float:right">Login</a> -->
+        
+      </div>
+      <div id="main-content">
+        <div>
+            <p style="margin:auto;text-align:center"> Type of Room</p>
+          <table style="margin:auto">
+            <tr>
+              <td>
+                <a href="host_form.html">
+                <img  class="dimg" src="room.jpg" />
+                <div class="overlay">Size:60<br>Non-Ac</div>
+              </a>
+                <p style="margin:auto; text-align:center;">Room</p>
+              </td>
+              <td>
+                <a href="host_form.html">
+                <img class="dimg" src="room2.jpg"/>
+                <!-- <canvas id="stage" width="400px" height="400px"></canvas> -->
+                <div class="overlay">Size:60<br>Non-Ac</div>
+                </a>
+                <p style="margin:auto; text-align:center;">Stage</p>
+              </td>
+          </table>
+        </div>
+      </div>
+	</body>
+  <!-- <script type="text/javascript">
+
+  function addPhoto(CanvasRefrence,photo){
+      var canvas=document.getElementById(CanvasRefrence);
+      var ctx=canvas.getContext('2d');
+      var img= document.createElement("img");
+      img.onload=function(){
+                      ctx.drawImage(img,0,0);
+                    }
+            img.src=photo;
+  }
+  addPhoto("room","dark-grey-terrazzo.png");
+  addPhoto("stage","folk-pattern-black.png");
+  var room=document.getElementById("room");
+  room.addEventListener("mouseover",function(){displayText(room,'Size:60 Non Ac');room.style.opacity=0.4;});
+  room.addEventListener("mouseout",function(){addPhoto("room","dark-grey-terrazzo.png");});
+  function displayText(room,txt){
+      var ctx=room.getContext('2d')
+      ctx.font = "20px monospace";
+      ctx.fillStyle = "#deafb1";
+      ctx.fillText(txt,20,50);
+  }
+
+  function removeText(room,){
+    var ctx=room.getContext('2d');
+    ctx.clearRect(0,0,)
+  }
+
+
+  </script> -->
+</html>

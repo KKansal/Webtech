@@ -1,0 +1,171 @@
+<html>
+    <head>
+        <link rel="icon" 
+            type="image/png" 
+			href="logo_final.png"/>
+			<title>Samarpana</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body{
+                background-image: url("pat13.jpg");
+            }
+            .header {
+                padding: 30px;
+                text-align: center;  
+            }
+            .header h1 {
+                font-size: 50px;
+                font-family:Arial, Helvetica, sans-serif;
+                color:bisque;
+                /*text-shadow: 2px 2px black;*/
+            }
+            .pageName {
+                width:75%;
+            }
+            .pageName h2{
+                font-size: 40px;
+                text-align: center;
+                color: bisque;
+
+            }
+            .about {
+                font-size:20px;
+                width:60%;
+                /*margin-right:400px;*/
+                color: bisque;
+            }
+
+            .footer {
+                margin: 100px auto 0 auto;
+                padding: 30px;
+                text-align: left;
+                background: black;
+            }
+            .pfoot{
+            text-align:center;
+            align-content:center;
+            margin: auto;
+            padding:10px 50px 50px 20px
+            }
+            .feedback{
+                text-align:left;
+                color:bisque;
+            }
+            .register {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: bisque;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                transition-duration: 0.4s;
+            }
+            .register:hover {
+                box-shadow: 3px 3px 3px grey;
+            }
+            
+            .leftcolumn {
+                float: left;
+                width: 75%;
+                padding-left: 300px;
+            }
+            .rightcolumn {
+                float: left;
+                width: 25%;
+                background-image: url("pat6_1.jpg");
+                padding-left: 20px;
+                color: bisque;
+            }
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .card {
+                padding: 20px;
+                margin-top: 20px;
+                color: bisque;
+            }
+            .topnav {
+                overflow: hidden;
+                background-color: black;
+            }
+
+            /* Style the topnav links */
+            .topnav a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            /* Change color on hover */
+            .topnav a:hover {
+                background-color: #ddd;
+                color: bisque;
+            }
+        </style>
+    </head>
+    <body onload="gal()">
+        <div class="header">
+            <img src="logo_final.png" style="height:100px; width:100px; padding:2px; float:left"/>
+          <h1>KWYB - Know Where You Book !</h1>
+        </div>
+        <div class="topnav">
+                <a href="home.html">Home</a>
+        </div>
+        <div class="row">
+            <div class="pageName">
+                <h2>Samarpana</h2>
+            </div>
+            <div class="gallery leftcolumn">
+                <img id="samarpana" height="400px" width="60%"/>
+                <p class="about">
+                        A Student initiative to create awareness about martyrs of Indian Armed Forces & encourage civilians to remember, pay their respects to them. As the younger generation, it is our responsibility to appreciate the efforts of those who have contributed and sacrificed for us and as a civilized society, contribute something in return.
+                </p>
+            </div>
+            <div class="rightcolumn">
+                <div class="card">
+                    <h3>To be a Part of Samarpana</h3>
+                    <button class="register" onclick="reg_page()" type="button">Register Here</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+                <div class="feedback">
+                    <button href="feedback.html">Feedback</button>
+                </div>
+                <div class="feedback" >
+                    <p> Email us - abc@ymail.com </p>
+                </div>
+            </div>
+    </body>
+    <script>
+        function gal()
+        {
+            samarpana=document.getElementById("samarpana");
+            samarpana.setAttribute("src","samarpana1.jpg");
+            setTimeout(function(){samarpana.setAttribute("src","samarpana2.jpg");},3000);
+            i1=setInterval(function(){
+            samarpana.setAttribute("src","samarpana3.jpg");
+            setTimeout(function(){samarpana.setAttribute("src","samarpana4.jpg");},3000);
+            setTimeout(function(){samarpana.setAttribute("src","samarpana1.jpg");},6000);
+            },9000);
+        }
+
+        function reg_page()
+        {
+            clearInterval(i1);
+            window.location.href="form.html";
+        }
+        
+    </script>
+</html>

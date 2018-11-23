@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" 
+    type="image/png" 
+    href="logo_final.png"/>
+    <title>KWYB</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background-image: url("pat13.jpg")
+}
+
+.header {
+   /* box-shadow: 10px 20px 5px grey ;*/
+    padding: 30px;
+    text-align: center;
+    
+}
+
+.header h1 {
+    font-size: 50px;
+    color:white;
+    /*text-shadow: 2px 2px black;*/
+
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: bisque;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%; 
+    background-image: url("pat6_1.jpg");
+    padding-left: 20px;
+    color: bisque;
+}
+
+/* Fake image */
+.fakeimg {
+    
+    width: 100%;
+    padding: 20px;
+    color: bisque;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color:black;
+    padding: 20px;
+    margin-top: 20px;
+    color: bisque;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    margin: 50px 0px 0px 0px;
+    text-align: left;
+    background: black;
+    color:bisque;
+    height:100px;
+}
+
+.pfoot{
+  text-align:center;
+  align-content:center;
+  margin: auto;
+  padding:10px 50px 50px 20px
+}
+.feedback{
+    text-align:left;
+    color:bisque;
+  }
+  .center
+  {
+	  display:block;
+	  margin-left: auto;
+	  margin-right: auto;
+  }
+ 
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+  .register {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: bisque;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                transition-duration: 0.4s;
+            }
+            .register:hover {
+                box-shadow: 3px 3px 3px grey;
+            }
+
+</style>
+</head>
+<body>
+<div class="header">
+    <img src="logo_final.png" style="height:100px; width:100px; padding:2px; float:left"/>
+  <h1>KWYB - Know Where You Book !</h1>
+</div>
+
+      <div class="topnav">
+        <a href="home.html">Home</a>
+        <a href="1.html">Host Now </a>
+        <a href="form2.html">Book Now</a>
+        <a href="clubs.html">Club </a>
+        <a href="newsfeed.html">News</a>
+        <a href="events.html">Events</a>
+        <a href="a.html" style="float:right">Help?</a>
+        <!-- <a href="login.html" style="float:right">Login</a> -->
+        
+      </div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Nautanki</h2>
+      <img class="center" src="nautanki.png"/><p>The dramatics Club brings together students interested in stage play, street play and mime. The Club conducted street plays at various college festivals. The present membership is 40 and is open to all students subject to performance in the auditions.</p>
+		<a href="nautanki.html">View More....</a>
+	</div>
+	<div class="card">
+			<h2>Samarpana</h2>
+			<img class="center" src="samarpana.png"/>
+			<p>A Student initiative to create awareness about martyrs of Indian Armed Forces & encourage civilians to remember, pay their respects to them. As the younger generation, it is our responsibility to appreciate the efforts of those who have contributed and sacrificed for us and as a civilized society, contribute something in return.</p>
+			  <a href="samarpana.html">View More....</a>
+	</div>
+	<div class="card">
+			<h2>CSR</h2>
+			<img class="center" src="csr.png"/>
+			<p>The Collegiate Social Responsibility Club of PES University, has been striving towards its aim of service to the less fortunate.
+				</p>
+			  <a href="csr.html">View More....</a>
+	</div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <a href="feedback.html">Feedback</a>
+  <p style="margin-bottom: 0px">&#169 KWYB | Powered by KSPS</p>
+</div>
+</body>
+</html>

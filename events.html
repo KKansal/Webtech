@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background-image: url("back12.jpg")
+}
+
+.header {
+   /* box-shadow: 10px 20px 5px grey ;*/
+    padding: 30px;
+    text-align: center;
+    
+}
+
+.header h1 {
+    font-size: 50px;
+    color:rgb(226, 201, 89);
+    /*text-shadow: 2px 2px black;*/
+
+}
+
+/* Style the top navigation bar */
+ .topnav {
+                  overflow: hidden;
+                  background-color: rgba(37, 37, 37, 0.74);
+                  border-radius: 25px;
+                  position:sticky;
+                  z-index:10;
+                  top:0;
+                  font-weight:bold;
+
+              }
+
+              /* Style the topnav links */
+              .topnav a {
+                  float: left;
+                  display: block;
+                  color: white;
+                  text-align: center;
+                  padding: 14px 16px;
+                  text-decoration: none;
+              }
+
+              /* Change color on hover */
+              .topnav a:hover {
+                  background-color: rgb(226, 201, 89);
+                  color: rgb(8, 12, 219);
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+.card h2{
+    text-align: center;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%; 
+    background-image: url("pat6_1.jpg");
+    padding-left: 20px;
+    color: rgb(226, 201, 89);
+}
+
+/* Fake image */
+.fakeimg {
+    
+    width: 100%;
+    padding: 20px;
+    color: rgb(226, 201, 89);
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color:rgba(37, 37, 37, 0.74);
+    padding: 20px;
+    margin-top: 20px;
+    color: rgb(226, 201, 89);
+    height: 700px;
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.card2{
+    background-color:rgba(37, 37, 37, 0.74);
+    padding: 20px;
+    margin-top: -690px;
+    margin-right: -450px;
+    color: rgb(226, 201, 89);
+    height: 600px;
+    width: 400px;
+    border-radius: 25px;
+    float:right;
+    float: top;
+    box-shadow: 10px 10px 5px grey;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    margin: 50px 0px 0px 0px;
+    text-align: left;
+    background: black;
+    position: relative;
+    color:rgb(226, 201, 89);
+}
+
+.footer {
+    margin: 50px 50px 0px 0px;
+    text-align: left;
+    background: rgba(37, 37, 37, 0.74);
+    position: relative;
+    color:rgb(226, 201, 89);
+    border-radius: 25px;
+    height: 100px;
+    box-shadow: 10px 10px 5px grey;
+}
+.feedback{
+    text-align:left;
+    color:rgb(226, 201, 89);
+}
+
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+/* Month header */
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #313333;
+    text-align: center;
+}
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.month li .buttons{
+    color:rgb(238, 201, 98)
+}
+
+/* Previous button inside month header */
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+    float: right;
+    padding-top: 20px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+    padding: 50px 0;
+    background: rgb(230, 194, 97);
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size:20px;
+    color: #777;
+}
+
+.days li:hover{
+    background-color: rgb(231, 118, 25);
+    color: maroon; 
+}
+.but{
+    border-radius: 10px;
+    padding: 5px;
+    background: #636464;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+    padding: 6px;
+    background: #636464;
+    color: white !important;
+    border-radius:50%;
+}
+
+.but2{
+    background-color: rgb(9, 31, 41); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+</style>
+<script type="text/javascript">
+    function next_month(){
+        var month_name = document.getElementById("month1");
+        var week = document.getElementById("mon");
+        var weekday_array = ["Thus","Fri","Sat","Sun","Mon","Tue","Wed"];
+        var i;
+        if(month_name.innerHTML == "November 2018")
+        {
+            month_name.innerHTML = "December 2018";
+            var day = document.createElement("LI");
+            var text  = document.createTextNode("31");
+            day.appendChild(text)
+            document.getElementById("list").appendChild(day);
+            for(i in weekday_array){
+                week.innerHTML = weekday_array[i];
+                week = week.nextSibling;
+            }
+
+        }
+
+    }
+    function prev_month(){
+        month_name = document.getElementById("month1");
+        var week = document.getElementById("mon");
+        var weekday_array = ["Mon","Tue","Wed","Thur","Fri","Sat","Sun"];
+        if(month_name.innerHTML == "December 2018")
+        {
+            month_name.innerHTML = "November 2018";
+            var li = document.getElementById("list");
+            li.removeChild(li.lastChild);
+            for(i in weekday_array){
+                week.innerHTML = weekday_array[i];
+                week = week.nextSibling;
+            }
+        }
+    }
+    function events(){
+        var eve = document.getElementById("first");
+        eve.innerHTML = "<ol><li style='font-size:25px; color:orange;'>There is a CSR club meeting for all the core members.They are requested to assemble at room CSR room by 10am ASAP</li><li style='font-size:25px; color: orange;'>CNR Rao scholarships are awarded at 11am. the students should assemble well before expected time.</li></ol>";
+    }
+
+    function even(){
+        var eve = document.getElementById("first");
+        eve.innerHTML = "<ol><li style='font-size:25px; color:orange;'>Microsoft Innovation labs is hosting a roadshow of all their endavours.Do visit it.It is held in the MRD auditorium. </li></ol>";
+    }
+    function mouse(){
+        console.log("hey");
+        var element = document.getElementsByClassName("item");
+        element[0].addEventListener("onclick",function(){
+            console.log("hello")
+            var eve = document.getElementById("first");
+            eve.innerHTML="NO events available";
+        })
+
+}
+</script>
+</head>
+<body>
+<div class="header">
+    <img src="logo_final.png" style="height:100px; width:100px; padding:2px; float:left"/>
+  <h1>KWYB - Know Where You Book !</h1>
+</div>
+
+      <div class="topnav">
+        <a href="home.html">Home</a>
+        <a href="1.html">Host Now </a>
+        <a href="form2.html">Book Now</a>
+        <a href="clubs.html">Club </a>
+        <a href="newsfeed.html">News</a>
+        <a href="events.html">Events</a>
+        <a href="a.html" style="float:right">Help?</a>
+        <!-- <a href="login.html" style="float:right">Login</a> -->
+        
+      </div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Calendar Of Events:</h2>
+      <div class="month"> 
+        <ul>
+          <li class="prev"><button class="buttons" onclick="prev_month()">&#10094;</button></li>
+          <li class="next"><button class="buttons" onclick="next_month()">&#10095;</button></li>
+          <li id="month1">November 2018</span></li>
+        </ul>
+      </div>
+      <ul class="weekdays">
+        <li id="mon">Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li>
+      </ul>
+      <ul class="days" id="list" onclick="mouse()"> 
+        <li class="item">1</li><li class="item">2</li><li class="item">3</li><li class="item">4</li> <li class="item">5</li><li class="item">6</li><li class="item">7</li>
+        <li class="item">8</li><li class="item">9</li><li><button class = "but" onclick="events()"><span class="active">10</span></button></li>
+        <li class="item">11</li><li class="item">12</li class="item"><li class="item">13</li><li class="item">14</li><li class="item">15</li><li class="item">16</li><li class="item">17</li>
+        <li class="item">18</li><li class="item">19</li><li class="item">20</li><li class="item">21</li><li class="item">22</li>
+        <li class="item">23</li><li class="item">24</li><li class="item">25</li><li><button class = "but" onclick="even()"><span class="active">26</span></button></li><li class="item">27</li><li class="item">28</li>
+        <li class="item">29</li><li class="item">30</li>
+      </ul>
+    </div>
+    <div class="card2">
+        <h2>Events On Required Date:</h2>
+        <p id = "first">events</p>
+    </div>
+    </div>
+   
+</div>
+
+<div class="footer">
+  <button class="but2" href="feedback.html">Feedback</button>
+  <p style="margin-bottom: 0px"> Email us - abc@ymail.com </p>
+</div>
+</body>
+<script>/*
+    clubs=document.getElementById("clubs");
+    clubs.setAttribute("width","100%");
+    clubs.setAttribute("height","100px");
+    clubs.setAttribute("src","nautanki.png");
+    clubs.setAttribute("onclick","nautanki()");
+    setTimeout(function(){clubs.setAttribute("src","CSR.png");clubs.setAttribute("onclick","csr()");},3000);
+    i1=setInterval(function(){
+    clubs.setAttribute("src","samarpana.png");clubs.setAttribute("onclick","samarpana()");
+    setTimeout(function(){clubs.setAttribute("src","nautanki.png");clubs.setAttribute("onclick","nautanki()");},3000);
+    setTimeout(function(){clubs.setAttribute("src","CSR.png");clubs.setAttribute("onclick","csr()");},6000);
+    },9000);
+    function nautanki()
+    {
+      clearInterval(i1)
+      window.location.href="nautanki.html"
+    }
+    function csr()
+    {
+      clearInterval(i1)
+      window.location.href="csr.html"
+    }
+    function samarpana()
+    {
+      clearInterval(i1)
+      window.location.href="samarpana.html"
+    }*/
+    </script>
+
+</html>

@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <link rel="icon" 
+            type="image/png" 
+            href="logo_final.png"/>
+            <title>Nautanki</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body{
+                background-image: url("pat13.jpg");
+            }
+            .header {
+                padding: 30px;
+                text-align: center;  
+            }
+            .header h1 {
+                font-size: 50px;
+                font-family:Arial, Helvetica, sans-serif;
+                color:bisque;
+                /*text-shadow: 2px 2px black;*/
+            }
+            .pageName {
+                width:75%;
+            }
+            .pageName h2{
+                font-size: 40px;
+                text-align: center;
+                color: bisque;
+
+            }
+            .about {
+                font-size:20px;
+                width:60%;
+                /*margin-right:400px;*/
+                color: bisque;
+            }
+
+            .footer {
+                margin: 100px auto 0 auto;
+                padding: 30px;
+                text-align: left;
+                background: black;
+            }
+            .pfoot{
+            text-align:center;
+            align-content:center;
+            margin: auto;
+            padding:10px 50px 50px 20px
+            }
+            .feedback{
+                text-align:left;
+                color:bisque;
+            }
+            .register {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: bisque;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                transition-duration: 0.4s;
+            }
+            .register:hover {
+                box-shadow: 3px 3px 3px grey;
+            }
+            
+            .leftcolumn {
+                float: left;
+                width: 75%;
+                padding-left: 300px;
+            }
+            .rightcolumn {
+                float: left;
+                width: 25%;
+                background-image: url("pat6_1.jpg");
+                padding-left: 20px;
+                color: bisque;
+            }
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .card {
+                padding: 20px;
+                margin-top: 20px;
+                color: bisque;
+            }
+            .topnav {
+                overflow: hidden;
+                background-color: black;
+            }
+
+            /* Style the topnav links */
+            .topnav a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            /* Change color on hover */
+            .topnav a:hover {
+                background-color: #ddd;
+                color: bisque;
+            }
+        </style>
+    </head>
+    <body onload="gal()">
+        <div class="header">
+            <img src="logo_final.png" style="height:100px; width:100px; padding:2px; float:left"/>
+          <h1>KWYB - Know Where You Book !</h1>
+        </div>
+        <div class="topnav">
+            <a href="home.html">Home</a>
+            <a href="1.html">Host Now </a>
+            <a href="form2.html">Book Now</a>
+            <a href="clubs.html">Club </a>
+            <a href="newsfeed.html">News</a>
+            <a href="events.html">Events</a>
+            <a href="a.html" style="float:right">Help?</a>
+            <!-- <a href="login.html" style="float:right">Login</a> -->
+            
+          </div>
+        <div class="row">
+            <div class="pageName">
+                <h2>Nautanki</h2>
+            </div>
+            <div class="gallery leftcolumn">
+                <img id="nautanki" height="400px" width="60%"/>
+                <p class="about">
+                        The dramatics Club brings together students interested in stage play, street play and mime. The Club conducted street plays at various college festivals. The present membership is 40 and is open to all students subject to performance in the auditions.
+                </p>
+            </div>
+            <div class="rightcolumn">
+                <div class="card">
+                    <h3>To be a Part of Nautanki</h3>
+                    <button class="register" onclick="reg_page()" type="button">Register Here</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+                <div class="feedback">
+                    <button href="feedback.html">Feedback</button>
+                </div>
+                <div class="feedback" >
+                    <p> Email us - abc@ymail.com </p>
+                </div>
+            </div>
+    </body>
+    <script>
+        function gal()
+        {
+            nautanki=document.getElementById("nautanki");
+            nautanki.setAttribute("src","nautanki1.jpg");
+            setTimeout(function(){nautanki.setAttribute("src","nautanki2.jpg");},3000);
+            i1=setInterval(function(){
+            nautanki.setAttribute("src","nautanki3.jpg");
+            setTimeout(function(){nautanki.setAttribute("src","nautanki4.jpg");},3000);
+            setTimeout(function(){nautanki.setAttribute("src","nautanki1.jpg");},6000);
+            },9000);
+        }
+
+        function reg_page()
+        {
+            clearInterval(i1);
+            window.location.href="form.html";
+        }
+        
+    </script>
+</html>

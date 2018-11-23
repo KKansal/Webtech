@@ -1,0 +1,211 @@
+<html>
+    <head>
+
+    </head>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial;
+            background-image: url("back12.jpg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .header {
+            /* box-shadow: 10px 20px 5px grey ;*/
+            padding: 30px;
+            text-align: center;
+        }
+
+        .feedback{
+            background-color:rgba(37, 37, 37, 0.74);
+            padding: 20px;
+            margin-top: 20px;
+            color: rgb(71, 10, 240);
+            border-radius: 25px;
+            box-shadow: 10px 10px 5px grey;
+            height: 900px;
+            width: 1200px;
+            padding-right: 600px;
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            margin-top: -50px;
+            margin-left: -100p
+            }
+        .feed{
+            width:500px;
+            height: 600px;
+            background: rgba(37, 37, 37, 0.74);
+            top :100px;
+            bottom:0px;
+            left:85%;
+            margin-top: 25px;
+            margin-left:1350px;
+            align-items:right;
+            border-radius: 25px;
+            box-shadow: 10px 10px 5px grey;
+            align-content: center;
+        }
+
+        .feeds{
+	        background-color: #eee;
+            width: 400px;
+            height: 150px;
+            padding: 100px;
+            border: 5px black;
+            margin: 0;
+            background-color:rgb(190, 189, 189);
+            border-radius: 25px;
+            color: brown;
+            margin-left:50px;
+            left:15%;
+            align-content: center;
+        }
+
+        input[type=text], select, textarea {
+        width: 100%; /* Full width */
+        padding: 12px; /* Some padding */
+        border: 1px solid rgb(241, 228, 228); /* Gray border */
+        border-radius: 4px; /* Rounded borders */
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 6px; /* Add a top margin */
+        margin-bottom: 16px; /* Bottom margin */
+        resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+        font-size: 10px;
+        }
+
+/* Style the submit button with a specific background color etc */
+        input[type=submit] {
+        background-color: rgb(101, 73, 228);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+/* When moving the mouse over the submit button, add a darker green color */
+        input[type=submit]:hover {
+        background-color: #686ae2;
+        }
+
+/* Add a background color and some padding around the form */
+        .container {
+        border-radius: 10px;
+        background-color: #f58585;
+        padding: 20px;
+        width: 900px;
+        }
+
+        .feed h2 {
+        padding-left: 20px;
+        font-size: 30px;
+        color:rgb(226, 201, 89);
+    }
+        .feedback h1{
+            color: rgb(226, 201, 89);
+        }
+        .feeds{
+            width: 400px;
+        }
+        .topnav {
+                  overflow: hidden;
+                  background-color: rgba(37, 37, 37, 0.74);
+                  border-radius: 25px;
+                  position:sticky;
+                  z-index:10;
+                  top:0;
+                  font-weight:bold;
+
+              }
+
+              /* Style the topnav links */
+              .topnav a {
+                  float: left;
+                  display: block;
+                  color: white;
+                  text-align: center;
+                  padding: 14px 16px;
+                  text-decoration: none;
+              }
+
+              /* Change color on hover */
+              .topnav a:hover {
+                  background-color: rgb(226, 201, 89);
+                  color: rgb(8, 12, 219);
+}
+
+    </style>
+    <script>
+    </script>
+    <body>
+      <div class="topnav">
+        <a href="home.html">Home</a>
+        <a href="1.html">Host Now </a>
+        <a href="form2.html">Book Now</a>
+        <a href="clubs.html">Club </a>
+        <a href="newsfeed.html">News</a>
+        <a href="a.html" style="float:right">Help?</a>
+        <!-- <a href="login.html" style="float:right">Login</a> -->
+        
+      </div>
+          <div class="feedback">
+              <div>
+                <h1><b>Feedback:</b></h1>
+                <div class="container">
+                        <form action="fb.php" method="post">
+
+                          <label for="name"><b>NAME:<b></label>
+                          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                          <label for="usn"><b>USN:<b></label>
+                          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                          <label for="whicheve"><b>Feedback for what:<b></label>
+                          <select id="country" name="club" aria-placeholder="select">
+                            <option value="website">Website</option>
+                            <option value="nautanki">Nautanki team</option>
+                            <option value="CSR">CSR</option>
+                            <option value="samapana">Samarpana</option>
+                          </select>
+
+                          <label for="subject"><b>Subject:<b></label>
+                          <textarea id="subject" name="subject" placeholder="Write something.." style="height:300px"></textarea>
+
+                          <label for="rate"><b>Rate Our Site:<b></label>
+                          <input id="rating" type="number" name="number" min="0" max="10">
+                          <br>
+                          <br>
+                          <input type="submit" value="Submit">
+
+                        </form>
+                      </div>
+              </div>
+          </div>
+          <br>
+          <div class="feed">
+            <br>
+            <h2>Popular Feedback</h2>
+          <marquee height = 400px width = 500px behaviour = "scroll" direction = "up">
+            <div class="feeds">
+                <p class="para">
+                    "A very good website,really useful for hosting events."
+                </p>
+              </div>
+              <br>
+              <div class="feeds">
+                <p class="para">
+                    "The UI can be bettered. Consider adding a few more functionality. "
+                </p>
+              </div>
+              <br>
+              <div class="feeds">
+                   <p class="para"> "it is a very cool website. useful for getting rooms booked easily."<p>
+              </div>    
+          </div>
+    </body>
+</html>

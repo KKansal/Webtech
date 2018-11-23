@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background-image: url("back12.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#scroll {
+   background-color: rgb(238, 222, 83);
+   border-radius: 25px;
+}
+
+
+.header {
+   /* box-shadow: 10px 20px 5px grey ;*/
+    padding: 30px;
+    text-align: center;
+    
+}
+
+.header h1 {
+    font-size: 50px;
+    color:rgb(226, 201, 89);
+    /*text-shadow: 2px 2px black;*/
+
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: rgba(37, 37, 37, 0.74);
+    border-radius: 25px;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: rgb(226, 201, 89);
+    color: rgb(8, 12, 219);
+}
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+    border-radius: 25px;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%; 
+    background-image: url("pat6_1.jpg");
+    padding-left: 20px;
+    color: rgb(226, 201, 89);
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px grey;
+    
+}
+
+/* Fake image */
+.fakeimg {
+    width: 100%;
+    padding: 20px;
+    color: rgb(234, 234, 243);
+}
+
+.fakeimg1{
+    width: 400px;
+    height: 150px;
+    padding: 10px;
+    border: 5px black;
+    margin: 0; 
+    background-color:rgb(190, 189, 189);
+    border-radius: 25px;
+    color: brown
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color:rgba(37, 37, 37, 0.74);
+    padding: 20px;
+    margin-top: 20px;
+    color: rgb(226, 201, 89);
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    margin: 50px 50px 0px 0px;
+    text-align: left;
+    background: rgba(37, 37, 37, 0.74);
+    position: relative;
+    color:rgb(226, 201, 89);
+    border-radius: 25px;
+    height: 100px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.drop{
+  display: none;
+  background-color: #f9f9f9;
+  position: fixed;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 1px 16px;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.down:hover .drop{
+  display: block;
+}
+
+.pfoot{
+  text-align:center;
+  align-content:center;
+  margin: auto;
+  padding:10px 50px 50px 20px
+}
+.feedback{
+    text-align:left;
+    color:bisque;
+    border-radius: 25px;
+
+  }
+.feed{
+    background-color: rgb(9, 31, 41); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+</style>
+<script>
+
+</script>
+</head>
+<body>
+<div class="header">
+    <img src="logo_final.png" style="height:100px; width:100px; padding:2px; float:left"/>
+  <h1>KWYB - Know Where You Book !</h1>
+</div>
+<div class="topnav">
+  <a href="#">Register</a>
+  <a href="#">Login</a>
+  <a href="">Club</a>
+  <a href="#">News</a>
+  <div class="down"><a>Theme</a>
+    <div class="drop">
+      <a href="">dark</a>
+      <a href="">bright</a>
+    </div>
+  </div>
+  <a href="#" style="float:right">Help?</a>
+</div>
+<marquee id = "scroll" behavior="scroll" direction="right" width="100%" height = 20px onloadstart = "blick()" >NEWS!!!!</marquee>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Event GALLERY</h2>
+      <h5>Title description</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text</p>
+      <p>S</p>
+    </div>
+    <div class="card">
+      <h2>WEBSITE INFO</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>CLUBS</h2>
+      <img id="clubs">
+    </div>
+    <div class="card">
+      <h3>TOP NEWS</h3>
+      <marquee direction="up">
+      <div class="fakeimg1">
+        <p>news!!!!!!!
+          click here to know more.
+        </p>
+      </div>
+      <br>
+      <div class="fakeimg1">
+        <p>news!!!
+          click here to know more.
+        </p>
+      </div>
+      <br>
+      <div class="fakeimg1">
+        <p>news!!
+          click here to know more
+        </p>
+      </div>
+      <br>
+      </marquee>
+    </div>
+    <div class="card">
+      <h3>Follow Us</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <button class="feed" href="feedback.html">Feedback</button>
+  <p style="margin-bottom: 0px"> Email us - abc@ymail.com </p>
+</div>
+</body>
+<script>
+  clubs=document.getElementById("clubs");
+  clubs.setAttribute("width","100%");
+  clubs.setAttribute("height","100px");
+  clubs.setAttribute("src","nautanki.png");
+  clubs.setAttribute("onclick","nautanki()");
+  setTimeout(function(){clubs.setAttribute("src","CSR.png");clubs.setAttribute("onclick","csr()");},3000);
+  i1=setInterval(function(){
+  clubs.setAttribute("src","samarpana.png");clubs.setAttribute("onclick","samarpana()");
+  setTimeout(function(){clubs.setAttribute("src","nautanki.png");clubs.setAttribute("onclick","nautanki()");},3000);
+  setTimeout(function(){clubs.setAttribute("src","CSR.png");clubs.setAttribute("onclick","csr()");},6000);
+  },9000);
+  function nautanki()
+  {
+    clearInterval(i1)
+    window.location.href="nautanki.html"
+  }
+  function csr()
+  {
+    clearInterval(i1)
+    window.location.href="csr.html"
+  }
+  function samarpana()
+  {
+    clearInterval(i1)
+    window.location.href="samarpana.html"
+  }
+</script>
+</html>
